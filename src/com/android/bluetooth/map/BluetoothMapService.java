@@ -626,8 +626,8 @@ public class BluetoothMapService extends ProfileService {
         if (!mRegisteredMapReceiver) {
             try {
                 registerReceiver(mMapReceiver, filter);
-            // We need WRITE_SMS permission to handle messages in
-            // actionMessageSentDisconnected()
+                // We need WRITE_SMS permission to handle messages in
+                // actionMessageSentDisconnected()
                 registerReceiver(mMapReceiver, filterMessageSent,
                     Manifest.permission.WRITE_SMS, null);
                 mRegisteredMapReceiver = true;
